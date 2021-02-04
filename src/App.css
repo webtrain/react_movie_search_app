@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {margin: 0;padding:0; box-sizing: border-box;}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #303644;
+}
+
+.app {
+  padding: 1rem;
+}
+
+form {
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  font-size: 1.1rem;
+  padding:0.75rem 1rem;
+  border-radius: 10px;
+  /* border: 1px solid rgb(90, 90, 90); */
+  border: none;
+  width: 80vw;
+  background-color: #525e7a;
+  color: rgb(207, 207, 207);
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.3)
+}
+
+.search::placeholder {
+  color: rgb(207, 207, 207);
+}
+
+.search:focus {
+  outline: none;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card:hover .movie-details {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.3)
+}
+
+.movie-details {
+  position: absolute;
+  max-height: 100%;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  opacity:0;
+  transform: translateY(100%);
+  transition: 0.2s ease-out;
+}
+
+.movie-details h3 {
+  margin-bottom: 1rem;
+}
+
+.vote {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background:  rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
